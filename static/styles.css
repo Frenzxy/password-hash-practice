@@ -1,9 +1,72 @@
-/* Work in Progress */
+/* color palette */
+:root {
+    --bg-primary: hsl(220, 100%, 1%);
+    --bg-secondary: hsl(220, 35%, 6%);
 
-/* html,
-body {
+    --surface: hsl(215, 30%, 9%);
+    --surface-elevated: hsl(215, 28%, 13%);
+
+    --border: hsl(210, 40%, 20%);
+
+    --blue-dark: hsl(215, 80%, 25%);
+    --blue: hsl(210, 85%, 40%);
+    --blue-bright: hsl(205, 95%, 52%);
+
+    --cyan-dark: hsl(195, 80%, 40%);
+    --cyan: hsl(195, 100%, 55%);
+    --cyan-bright: hsl(185, 100%, 65%);
+
+    --text-primary: hsl(205, 25%, 90%);
+    --text-secondary: hsl(210, 20%, 55%);
+}
+/* Overall sizing of the page and elements */
+*{
     margin: 0;
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-} */ 
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Page and elements editing starts here  */
+body {
+    margin: 0 auto;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    width: min(90vw, 1400px);
+    font-family: "Orbitron", sans-serif;
+    overflow-x: hidden;
+    padding: 10px;
+}
+button,
+input,
+label {
+    font: inherit;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px var(--border);
+    margin: 0 auto;
+    padding: 10px;
+    width: fit-content;
+    clip-path: polygon(
+    0 0,
+    95% 0,
+    100% 5.5%,
+    100% 100%,
+    5.5% 100%,
+    0 95%
+
+    );
+}
+h1{
+    font-size: 1.5rem;
+    font-family: "Orbitron", sans-serif;
+}
+h1,input, label{
+    margin: 0 0 10px 0;
+}
+input{
+    background-color: var(--surface);
+    color: var(--text-secondary);
+    text-align: center;
+}
